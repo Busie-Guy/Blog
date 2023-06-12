@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
     end
 
     def new
-        @post = Post.new
+        @post = post.new
       end
 
 end

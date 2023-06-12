@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
-  resources :articles, only: [:index, :new]
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  #resources :articles, only: [:index, :new]
 
   # Defines the root path route ("/")
   root "posts#new"
